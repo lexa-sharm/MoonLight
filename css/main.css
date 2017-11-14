@@ -1,0 +1,624 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic);
+html {
+    margin: 0;
+    padding: 0; 
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: normal;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+
+    color: #000;
+
+    background-color: #fff;
+}
+p, h3 {
+    margin: 0;
+    padding: 0;
+}
+div {
+    background-color: transparent;
+}
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+
+/*----------------------------------------------------------
+Блок HEADER
+----------------------------------------------------------*/
+
+
+.main-header {
+    font-size: 12px;
+    color: #666666;
+}
+.main-header .contacts {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+.contacts .phone-mail {
+    float: left;
+    margin-left: -10px;
+}
+.contacts .phone {
+    margin-right: 20px;
+}
+.contacts .mail {
+    position: relative;
+    padding-left: 20px;
+}
+.contacts .mail:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13px;
+    height: 12px;
+    background: transparent url(../img/sprite.png) no-repeat;
+    background-position: -142px -10px;
+}
+.contacts .login {
+    float: right;
+}
+.contacts .login a {
+    color: #666666;
+    text-transform: uppercase;
+}
+.contacts .login a:hover {
+    color: #000;
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .contacts .phone-mail {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .contacts .phone-mail span {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .contacts .mail:before {
+        left: 50%;
+        margin-left: -72px;
+    }
+    .contacts .login {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+/*---------------------------------
+Логотип. Поиск. Корзина
+---------------------------------*/
+.main-header .block-logo {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+.block-logo .logo {
+    float: left;
+    vertical-align: middle;
+}
+.block-logo .search {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+}
+.block-logo .search input[type="text"] {
+    padding: 10px 30px 10px 20px;
+}
+.block-logo .search:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    width: 17px;
+    height: 17px;
+    background: transparent url(../img/sprite.png) no-repeat;
+    background-position: -216px -10px;
+}
+.block-logo .basket {
+    position: relative;
+    float: right;
+    padding-left: 25px;
+}
+.block-logo .basket:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    width: 21px;
+    height: 21px;
+    background: transparent url(../img/sprite.png) no-repeat;
+    background-position: -175px -10px;
+}
+.block-logo .basket a {
+    display: block;
+    padding: 10px 0;
+    color: #666666;
+    text-transform: uppercase;
+}
+.block-logo .basket a:hover {
+    color: #000;
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .main-header .block-logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .block-logo .logo {
+        float: none;
+        margin-bottom: 15px;
+    }
+    .block-logo .search {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .block-logo .search:after {
+        right: 50%;
+        margin-right: -75px;
+    }
+    .block-logo .basket {
+        float: none;
+    }
+    .block-logo .basket:before {
+        left: 50%;
+        margin-left: -60px;
+    }
+}
+/*---------------------------------
+Меню
+---------------------------------*/
+.main-nav .nav {
+    float: left;
+}
+.nav-list {
+    margin: 0;
+    padding: 0;
+    font-size: 0; 
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    vertical-align: top;
+}
+.nav-item a {
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    text-transform: uppercase;
+}
+.nav-item a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.nav-item-active a {
+    position: relative;
+}
+.nav-item-active a:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #a6a6a6;
+}
+.main-nav .nav-item a {
+    padding: 20px 25px 20px 25px;
+}
+.main-nav .nav-item:first-child a {
+    padding-left: 0;
+}
+.main-nav .nav-item-first a:after {
+    left: 0;
+    right: 20px;
+}
+@media (min-width: 720px) {
+    .main-nav .nav-item-active a:after {
+        top: -2px;
+    }
+}
+@media (max-width: 720px) {
+    .main-nav .nav {
+        float: none;
+        margin-bottom: 5px;
+    }
+    .main-nav .nav-item {
+        display: block;
+        text-align: center;
+    }
+    .main-nav .nav-item a {
+        padding: 10px 0;
+    }
+    .main-header .main-nav .nav .nav-item-active a:after {
+        left: 30%;
+        right: 30%;
+        bottom: -2px;
+    }
+}
+/*---------------------------------
+Слайдер
+---------------------------------*/
+#slider-wrap {
+    position: relative;
+    height: 540px;
+    background: #eeeeee;
+    margin-bottom: 60px;
+}
+#slider { /* Оболочка слайдера */
+	width: 100%;
+	height: 540px;
+	position: relative;
+    text-align: center;
+}
+.slide { /* Слайд */
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+.slide img {
+    width: 100%;
+    left: 0;
+	top: 0;
+    margin-top: -200px;
+}
+@media (max-width: 1200px) {
+    .slide img {
+        margin-top: -85px;
+    }
+}
+@media (max-width: 1000px) {
+    #slider-wrap {
+        height: 400px;
+    }
+    #slider {
+        height: 400px;
+    }
+    .slide img {
+        margin-top: -70px;
+    }
+}
+@media (max-width: 750px) {
+    #slider-wrap {
+        height: 300px;
+    }
+    #slider {
+        height: 300px;
+    }
+    .slide img {
+        margin-top: -50px;
+    }
+}
+@media (max-width: 560px) {
+    #slider-wrap {
+        height: 250px;
+    }
+    #slider {
+        height: 250px;
+    }
+    .slide img {
+        margin-top: 0;
+    }
+}
+@media (max-width: 400px) {
+    #slider-wrap {
+        height: 200px;
+    }
+    #slider {
+        height: 200px;
+    }
+    .slide img {
+        margin-top: 0;
+    }
+}
+/*---------------------------------
+  Кнопки смены слайдов
+---------------------------------*/
+.sli-links {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -50px;
+}
+.sli-links .control-slide {
+	margin: 2px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(../img/sprite.png) -50px -10px no-repeat;
+}
+.sli-links .control-slide:hover {
+	cursor: pointer;
+	/*background-position: -32px -3px;*/
+    opacity: 0.7;
+}
+.sli-links .control-slide.active {
+	background-position: -10px -10px;
+}
+
+
+/*----------------------------------------------------------
+Женские обувь/сумки/одежда
+----------------------------------------------------------*/
+
+
+.site-block {
+    margin-bottom: 50px;
+}
+.site-block .site-block-item {
+    position: relative;
+}
+@media (max-width: 768px) {
+    .site-block .site-block-item {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 360px;
+    }
+}
+.site-block .site-block-item:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    background: transparent url(../img/sprite-content.png) no-repeat;
+}
+.site-block .block-item-shoes:before {
+    background-position: -15px -15px;
+}
+.site-block .block-item-bag:before {
+    background-position: -100px -15px;
+}
+.site-block .block-item-clothes:before {
+    background-position: -183px -15px;
+}
+.site-block .site-block-item a {
+    display: block;
+    padding: 150px 95px 55px 95px;
+    font-size: 30px;
+    color: #666666;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .site-block .site-block-item a {
+        padding: 150px 50px 55px 50px;
+    }
+}
+.site-block .block-item-shoes a {
+    background-color: #90d7de;
+}
+.site-block .block-item-bag a {
+    background-color: #f3ddcb;
+}
+.site-block .block-item-clothes a {
+    background-color: #f6b190;
+}
+.site-block .site-block-item a:hover {
+    box-shadow: 0 0 4px 1px rgba(204,204,204,0.8);
+}
+
+
+/*----------------------------------------------------------
+Особо отмеченные товары (Новый товар/Бестселлер/Выбранный товар)
+----------------------------------------------------------*/
+
+
+.featured {
+    margin-bottom: 100px;
+}
+.featured .featured-header {
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+.featured .featured-nav {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.featured-header .nav-item a {
+    padding: 10px 25px 10px 25px;
+    font-size: 16px;
+    color: #333333;
+}
+.featured-header .nav-item-active a:after {
+    bottom: -2px;
+}
+@media (max-width: 600px) {
+    .featured-nav .nav-item {
+        display: block;
+    }
+}
+/*---------------------------------
+Блок контроля (вправо/влево)
+---------------------------------*/
+.block-control {
+    float: right;
+}
+.featured-header .block-control {
+    padding-top: 7px;
+}
+@media (max-width: 600px) {
+    .featured-header .block-control {
+        padding-top: 85px;
+    }
+}
+.block-control .control-item {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 32px;
+    height: 32px;
+    background: #a6a6a6 url(../img/sprite.png) no-repeat;
+}
+.block-control .control-item:hover {
+    opacity: 0.8;
+}
+.block-control .control-prev {
+    margin-right: 5px;
+    background-position: -105px 0px;;
+}
+.block-control .control-next {
+    background-position: -78px 0px;
+}
+/*---------------------------------
+Товар
+---------------------------------*/
+.featured-item {
+    min-height: 260px;
+    text-align: center;
+}
+.featured-item:hover {
+    box-shadow: inset 0 0 4px 1px rgba(204,204,204,0.8);
+}
+.featured-item .link-img {
+    position: relative;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 190px;
+    text-align: center;
+}
+.featured-item .link-img img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 162px;
+    height: auto;
+}
+@media (max-width: 992px) {
+    .featured-item .link-img img {
+        left: 50%;
+        margin-left: -81px;
+    }
+}
+.featured-item .featured-item-desc a {
+    font-size: 14px;
+    color: #666666;
+    text-decoration: none;
+}
+.featured-item .featured-item-desc a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.featured-item .rating {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    font-size: 0; 
+    list-style: none;
+    text-align: center;
+}
+.featured-item .rating .rating-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+}
+.featured-item .rating .rating-item a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: transparent url(../img/sprite-star.png) no-repeat;
+    background-position: -5px -5px; 
+}
+.featured-item .rating .rating-item-active a {
+    background-position: -25px -5px;
+}
+.featured-item .price {
+    font-size: 14px;
+    color: #666666;
+}
+.featured-item .price span {
+    position: relative;
+    padding-left: 10px;
+}
+.featured-item .price span:before {
+    content: "$";
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+.featured-item .price .price-active {
+    font-weight: bold;
+}
+.featured-item .price .price-active:before {
+    font-weight: bold;
+}
+.featured-item .price .price-old {
+    text-decoration: line-through;
+}
+/*---------------------------------
+Конец стилизации товара
+---------------------------------*/
+
+
+/*----------------------------------------------------------
+Блоки женской одежды и женской обуви
+----------------------------------------------------------*/
+
+.product {
+    margin-bottom: 50px;
+}
+.product .product-clothes {
+    margin-bottom: 50px;
+}
+.product .product-shoes {
+    margin-bottom: 50px;
+}
+.product .product-head {
+    margin-bottom: 15px;
+}
+.product .product-head h2 {
+    position: relative;
+    z-index: 2;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-right: 3px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #333333;
+    text-align: left;
+    background-color: #fff;
+}
+.product .product-head:after {
+    content: "";
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    display: block;
+    border-bottom: 1px solid #cccccc;
+}
+.product .block-control {
+    position: relative;
+    z-index: 2;
+    margin-top: -10px;
+    padding-left: 10px;
+    background-color: #fff;
+}
